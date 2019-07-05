@@ -1,1 +1,10 @@
-
+.image-container {
+    min-height: 200px;
+    background-size: cover;
+}
+ion-title {
+    background: var(--ion-color-danger-shade);
+}
+ion-content {
+    --background: var( --ion-color-dark-tint);
+}
