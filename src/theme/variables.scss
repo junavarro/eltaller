@@ -1,6 +1,9 @@
 // Ionic Variables and Theming. For more info, please see:
 // http://ionicframework.com/docs/theming/
-
+@import '../theme/fonts';
+:root{
+  --ion-font-family: 'Nunito';
+}
 /** Ionic CSS Variables **/
 :root {
   /** primary **/
