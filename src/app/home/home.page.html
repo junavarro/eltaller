@@ -6,38 +6,33 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content >
-  <div class="ion-padding gallery">
-
-  <ion-grid >
-      <ion-row>
-        <ion-col size="12" size-sm="12" size-md="6" size-lg="3"   *ngFor="let image of items">
-            <div class="image-container">
-            <ion-card color="dark">
-
-              <img src="{{image.imageURL}}" alt="">
-              <ion-card-header class="ion-no-padding">
-
-                <ion-card-subtitle>
-                  <ion-grid>
-                    <ion-row >
-                      <ion-col size="9">
-                          {{image.title}}
-                      </ion-col>
-                      <ion-col  size="3">
-                          <ion-badge color="danger">66</ion-badge>
-                      </ion-col>
-                    </ion-row>
-                  </ion-grid>
-               
-                  
-                </ion-card-subtitle>
-              </ion-card-header>
-            </ion-card>
-          </div>
-        </ion-col>
-      </ion-row>
-    </ion-grid>
-   
+<ion-content class="ion-padding" >
+  <div class="images">
+    <div class="one-image" *ngFor="let item of items" (click)="presentModal()">
+      <ion-card color="dark">
+        <img src="{{item.imageURL}}" alt="">
+        <ion-card-header class="ion-no-padding">
+          <ion-card-subtitle>
+            <ion-grid>
+              <ion-row >
+              <ion-col size="8">
+              {{item.title}}
+              </ion-col>
+              <ion-col  size="4">
+              <!--<ion-badge color="danger">66</ion-badge>-->
+              </ion-col>
+              </ion-row>
+            </ion-grid>
+          </ion-card-subtitle>
+        </ion-card-header>
+      </ion-card>
+    </div>
   </div>
+
+   <!-- fab placed to the top end -->
+   <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+      <ion-fab-button>
+        <ion-icon name="add"></ion-icon>
+      </ion-fab-button>
+    </ion-fab>
 </ion-content>
